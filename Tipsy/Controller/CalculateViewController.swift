@@ -60,6 +60,7 @@ class CalculateViewController: UIViewController {
             resultTo2DecimalPlaces = String(format: "%.2f", result)
         }
         
+
         self.performSegue(withIdentifier:"calculateButtonPressed",sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,5 +71,6 @@ class CalculateViewController: UIViewController {
             resultVC.tip = Int(tip * 100)
             
         }
+        
     }
 }
