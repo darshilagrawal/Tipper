@@ -60,8 +60,15 @@ class CalculateViewController: UIViewController {
             resultTo2DecimalPlaces = String(format: "%.2f", result)
         }
         
-
-        self.performSegue(withIdentifier:"calculateButtonPressed",sender: self)
+        UIView.transition(with: sender,
+                                  duration: 1,
+                                  options: .transitionFlipFromLeft,
+                                  animations: {
+                                    sender.setTitle("Here You Go", for: .normal)
+                                  }, completion: { (finished) -> Void in
+                                    self.performSegue(withIdentifier:"calculateButtonPressed",sender: self)
+                                })
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "calculateButtonPressed"{

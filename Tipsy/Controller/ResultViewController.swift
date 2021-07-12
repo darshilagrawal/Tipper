@@ -22,7 +22,15 @@ class ResultViewController: UIViewController {
     }
     
     @IBAction func reCalculatePressed(_ sender: UIButton) {
-                dismiss(animated: true, completion: nil)
+        UIView.transition(with: sender,
+                                  duration: 1,
+                                  options: .transitionFlipFromRight,
+                                  animations: {
+                                    sender.setTitle("Ready Again?", for: .normal)
+                                  }, completion: { (finished) -> Void in
+                                    self.dismiss(animated: true, completion: nil)
+                                })
+        
     }
     
    
