@@ -26,7 +26,7 @@ class ResultViewController: UIViewController {
         super.viewWillAppear(animated)
         tipAnimation.contentMode = .scaleAspectFit
         tipAnimation.loopMode = .loop
-        tipAnimation.animationSpeed = 0.5
+        tipAnimation.animationSpeed = 0.8
         tipAnimation.play()
     }
     @IBAction func reCalculatePressed(_ sender: UIButton) {
