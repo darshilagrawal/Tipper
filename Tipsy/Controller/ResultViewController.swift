@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 class ResultViewController: UIViewController {
-
+    
     @IBOutlet weak var settingsLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     
@@ -29,17 +29,15 @@ class ResultViewController: UIViewController {
         tipAnimation.animationSpeed = 0.8
         tipAnimation.play()
     }
+    
     @IBAction func reCalculatePressed(_ sender: UIButton) {
         UIView.transition(with: sender,
-                                  duration: 1,
-                                  options: .transitionFlipFromRight,
-                                  animations: {
-                                    sender.setTitle("Ready Again?", for: .normal)
-                                  }, completion: { (finished) -> Void in
-                                    self.dismiss(animated: true, completion: nil)
-                                })
-        
+                          duration: 1,
+                          options: .transitionFlipFromRight,
+                          animations: {
+            sender.setTitle("Ready Again?", for: .normal)
+        }, completion: { (finished) -> Void in
+            self.dismiss(animated: true, completion: nil)
+        })
     }
-    
-   
 }
